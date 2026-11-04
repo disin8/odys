@@ -1,0 +1,207 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="pt-8 pb-16 sm:pt-14 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+    <!-- Subtitle pill badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 dark:bg-white/10 border border-black/5 dark:border-white/10 text-xs font-bold text-[#FF7A59] mb-6 backdrop-blur-md shadow-sm">
+      <Icon name="shield-check" class="w-4 h-4 text-[#FF7A59]" />
+      <span data-lang-en="Your Travels, Your Business" data-lang-ru="Ваши путешествия — только ваше дело">Your Travels, Your Business</span>
+    </div>
+
+    <!-- Main Title -->
+    <h1
+      class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-[#221F2C] dark:text-[#F5F3FA] mb-6"
+      data-lang-en="Turn your photo library into an interactive scratch map"
+      data-lang-ru="Превратите галерею фото в интерактивную карту открытий"
+    >
+      Turn your photo library into an interactive scratch map
+    </h1>
+
+    <!-- Value Prop Description -->
+    <p
+      class="text-base sm:text-xl text-[#6A647E] dark:text-[#928C9D] leading-relaxed mb-8 max-w-2xl mx-auto"
+      data-lang-en="Relive every journey, country, and city in a vivid personal atlas. 100% on-device, zero tracking, zero cloud uploads."
+      data-lang-ru="Вспомните каждое путешествие, страну и город в личном атласе. 100% на устройстве, без слежки и без серверов."
+    >
+      Relive every journey, country, and city in a vivid personal atlas. 100% on-device, zero tracking, zero cloud uploads.
+    </p>
+
+    <!-- App Store Download CTA Badge with user's exact Apple SVG -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+      <a
+        href="https://apps.apple.com/app/idYOUR_APP_ID"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-[#111111] hover:bg-black text-white shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all"
+      >
+        <svg class="w-7 h-7 fill-current shrink-0" viewBox="0 0 32 32">
+          <g fill="currentColor">
+            <path d="M19.61,4.808c1.035-1.294,1.737-3.032,1.552-4.808-1.515,.075-3.363,.999-4.433,2.295-.961,1.109-1.811,2.92-1.59,4.621,1.7,.147,3.399-.85,4.471-2.108"></path>
+            <path d="M21.143,7.248c-2.469-.147-4.569,1.401-5.748,1.401s-2.986-1.327-4.939-1.292c-2.542,.037-4.901,1.475-6.191,3.761-2.653,4.573-.7,11.357,1.88,15.081,1.253,1.843,2.763,3.872,4.753,3.799,1.88-.074,2.617-1.217,4.902-1.217s2.947,1.217,4.937,1.18c2.064-.037,3.354-1.844,4.607-3.688,1.437-2.101,2.026-4.129,2.063-4.24-.037-.037-3.98-1.549-4.016-6.084-.037-3.797,3.095-5.603,3.243-5.716-1.769-2.616-4.533-2.911-5.491-2.985"></path>
+          </g>
+        </svg>
+        <div class="text-left leading-tight">
+          <div class="text-[10px] font-normal tracking-wide opacity-80">Download on the</div>
+          <div class="text-base font-bold">App Store</div>
+        </div>
+      </a>
+    </div>
+
+    <div
+      class="text-xs text-[#6A647E] dark:text-[#928C9D]"
+      data-lang-en="Free download · Built for iOS 18 and later · Works completely offline"
+      data-lang-ru="Бесплатно · Для iOS 18 или новее · Работает полностью офлайн"
+    >
+      Free download · Built for iOS 18 and later · Works completely offline
+    </div>
+  </div>
+
+  <!-- Real App Screenshots Showcase -->
+  <div id="screens" class="max-w-5xl mx-auto">
+    <!-- Screen Switcher Tabs -->
+    <div class="flex items-center justify-center gap-2 mb-8 flex-wrap">
+      <button
+        type="button"
+        onclick="switchScreen(0)"
+        id="tab-0"
+        class="screen-tab active inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-[#FF7A59] text-white shadow-lg"
+      >
+        <span data-lang-en="Scratch Map" data-lang-ru="Карта открытий">Scratch Map</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/20 text-white">10 Visited</span>
+      </button>
+      <button
+        type="button"
+        onclick="switchScreen(1)"
+        id="tab-1"
+        class="screen-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-white/70 dark:bg-white/10 text-[#6A647E] dark:text-[#928C9D] hover:bg-white dark:hover:bg-white/15"
+      >
+        <span data-lang-en="Journeys & Flights" data-lang-ru="Поездки и маршруты">Journeys & Flights</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-[#8E88A4]">2025</span>
+      </button>
+      <button
+        type="button"
+        onclick="switchScreen(2)"
+        id="tab-2"
+        class="screen-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-white/70 dark:bg-white/10 text-[#6A647E] dark:text-[#928C9D] hover:bg-white dark:hover:bg-white/15"
+      >
+        <span data-lang-en="Lifetime Stats" data-lang-ru="Статистика">Lifetime Stats</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-[#8E88A4]">4% World</span>
+      </button>
+    </div>
+
+    <!-- Featured iPhone Showcase in authentic Deep Blue frame -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Main Selected Screen in User's Authentic iPhone Device Frame -->
+      <div class="lg:col-span-7 flex justify-center">
+        <div class="relative w-full max-w-[310px] sm:max-w-[340px] aspect-[1508/3278] select-none filter drop-shadow-2xl">
+          <!-- Inner App Screenshot (positioned within the cutout) -->
+          <div
+            class="absolute overflow-hidden rounded-[11.5%] z-0"
+            style="left: 10.01%; top: 10.01%; width: 79.98%; height: 79.98%;"
+          >
+            <img
+              id="hero-screen-img"
+              src="/odys/assets/aistudio/IMG_2916_99e55772.webp"
+              alt="Odys Travel App Screen"
+              class="w-full h-full object-cover select-none transition-opacity duration-300"
+            />
+          </div>
+
+          <!-- Exact Deep Blue Mockup Frame on top with transparent screen cutout -->
+          <img
+            src="/odys/assets/aistudio/deep-blue_f1a74022.webp"
+            alt="iPhone Device Frame"
+            class="relative z-10 w-full h-full pointer-events-none select-none drop-shadow-2xl"
+          />
+        </div>
+      </div>
+
+      <!-- Side Cards Context -->
+      <div class="lg:col-span-5 space-y-4">
+        <div class="odys-card p-6 border transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#FF7A59]">Odys iOS Feature</span>
+          </div>
+          <h3 id="screen-title" class="text-xl font-bold mb-2">Interactive Scratch Map</h3>
+          <p id="screen-desc" class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed">
+            Every country and region you visit is automatically colored on your private map directly from your photo timestamps.
+          </p>
+        </div>
+
+        <div class="odys-card p-5 border flex items-center justify-between text-xs font-medium text-[#6A647E] dark:text-[#928C9D]">
+          <span>Theme adapted automatically</span>
+          <span class="px-2.5 py-1 rounded-full bg-[#FF7A59]/10 text-[#FF7A59] font-bold">100% On-Device</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vanilla JS Tab & Theme Screen Switcher -->
+<script is:inline>
+  const screensData = [
+    {
+      dark: '/odys/assets/aistudio/IMG_2916_99e55772.webp',
+      light: '/odys/assets/aistudio/IMG_2920_51c54557.webp',
+      titleEn: 'Interactive Scratch Map',
+      titleRu: 'Интерактивная карта открытий',
+      descEn: 'Every country and region you visit is automatically colored on your private map directly from your photo timestamps.',
+      descRu: 'Каждая страна и регион автоматически закрашиваются на вашей карте на основе метаданных ваших фотографий.'
+    },
+    {
+      dark: '/odys/assets/aistudio/IMG_2918_2bcd836f.webp',
+      light: '/odys/assets/aistudio/IMG_2922_69e21ad8.webp',
+      titleEn: 'Animated Journeys & Flight Paths',
+      titleRu: 'Анимированные маршруты и перелёты',
+      descEn: 'Replay your travel routes as smooth animated flight paths, calculate total distance, and organize trips by year.',
+      descRu: 'Пересматривайте перелёты плавной анимацией дуг над планетой, считайте пройденный километраж и годы.'
+    },
+    {
+      dark: '/odys/assets/aistudio/IMG_2919_0f756b60.webp',
+      light: '/odys/assets/aistudio/IMG_2921_c7dcf275.webp',
+      titleEn: 'Personal Travel Lifetime Stats',
+      titleRu: 'Пожизненная статистика поездок',
+      descEn: 'Explore your top visited destinations, days abroad, passport stamp milestones, and percentage of the globe explored.',
+      descRu: 'Смотрите любимые направления, количество дней за границей, проценты исследованного мира и штампы.'
+    }
+  ];
+
+  let currentScreenIdx = 0;
+
+  function updateHeroImage() {
+    const isDark = document.documentElement.classList.contains('dark');
+    const screen = screensData[currentScreenIdx];
+    const imgEl = document.getElementById('hero-screen-img');
+    const titleEl = document.getElementById('screen-title');
+    const descEl = document.getElementById('screen-desc');
+    const isRu = (localStorage.getItem('lang') || 'en') === 'ru';
+
+    if (imgEl) {
+      imgEl.src = isDark ? screen.dark : screen.light;
+    }
+    if (titleEl) {
+      titleEl.textContent = isRu ? screen.titleRu : screen.titleEn;
+    }
+    if (descEl) {
+      descEl.textContent = isRu ? screen.descRu : screen.descEn;
+    }
+  }
+
+  function switchScreen(idx) {
+    currentScreenIdx = idx;
+    document.querySelectorAll('.screen-tab').forEach((tab, i) => {
+      if (i === idx) {
+        tab.className = 'screen-tab active inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-[#FF7A59] text-white shadow-lg';
+      } else {
+        tab.className = 'screen-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-white/70 dark:bg-white/10 text-[#6A647E] dark:text-[#928C9D] hover:bg-white dark:hover:bg-white/15';
+      }
+    });
+    updateHeroImage();
+  }
+  window.switchScreen = switchScreen;
+
+  const observer = new MutationObserver(() => updateHeroImage());
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+</script>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  active: 'privacy' | 'terms';
+}
+
+const { active } = Astro.props;
+
+const base =
+  'flex-1 sm:flex-none text-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all';
+const on = `${base} bg-[#FF7A59] text-white shadow-md shadow-[#FF7A59]/20`;
+const off = `${base} bg-white/70 dark:bg-white/10 text-[#6A647E] dark:text-[#928C9D] hover:bg-white dark:hover:bg-white/15`;
+---
+
+<div class="flex flex-col sm:flex-row gap-2 p-1.5 mb-8 rounded-2xl bg-black/[0.03] dark:bg-black/30 border border-black/5 dark:border-white/10">
+  <a
+    href="/odys/privacy/"
+    class={active === 'privacy' ? on : off}
+    aria-current={active === 'privacy' ? 'page' : undefined}
+    data-lang-en="Privacy Policy"
+    data-lang-ru="Политика приватности"
+  >
+    Privacy Policy
+  </a>
+  <a
+    href="/odys/terms/"
+    class={active === 'terms' ? on : off}
+    aria-current={active === 'terms' ? 'page' : undefined}
+    data-lang-en="Terms of Use (EULA)"
+    data-lang-ru="Условия использования (EULA)"
+  >
+    Terms of Use (EULA)
+  </a>
+</div>

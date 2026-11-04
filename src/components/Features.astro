@@ -1,0 +1,397 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section id="features" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="text-center max-w-3xl mx-auto mb-14">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 dark:bg-white/10 text-xs font-bold text-[#FF7A59] mb-4">
+      <span data-lang-en="Crafted for iPhone" data-lang-ru="Создано для iPhone">Crafted for iPhone</span>
+    </div>
+    <h2
+      class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#221F2C] dark:text-[#F5F3FA] mb-4"
+      data-lang-en="Everything your travel memories need. Nothing else."
+      data-lang-ru="Всё для ваших воспоминаний о поездках. Ничего лишнего."
+    >
+      Everything your travel memories need. Nothing else.
+    </h2>
+    <p
+      class="text-base sm:text-lg text-[#6A647E] dark:text-[#928C9D]"
+      data-lang-en="No feeds, no public profiles, no ads. Just your private world map."
+      data-lang-ru="Никаких лент, чужих профилей и рекламы. Только ваша личная карта мира."
+    >
+      No feeds, no public profiles, no ads. Just your private world map.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- CARD 1: Automatic Map — ping discovery badge -->
+    <div class="odys-card p-6 sm:p-7 flex flex-col justify-between hover:translate-y-[-2px] transition-all duration-300 group">
+      <div>
+        <div class="w-12 h-12 rounded-2xl bg-[#FF7A59]/10 text-[#FF7A59] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+          <Icon name="bolt" class="w-6 h-6" />
+        </div>
+        <h3 class="text-xl font-bold text-[#221F2C] dark:text-white mb-2" data-lang-en="Automatic Map from Photos" data-lang-ru="Карта из ваших фото">
+          Automatic Map from Photos
+        </h3>
+        <p class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed mb-6" data-lang-en="Open the app and instantly see every country, state, and city you've visited colored on a clean world map." data-lang-ru="Откройте приложение — и сразу увидите все посещенные страны и города на карте.">
+          Open the app and instantly see every country, state, and city you've visited colored on a clean world map.
+        </p>
+      </div>
+
+      <div class="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-black/30 border border-black/5 dark:border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF7A59] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF7A59]"></span>
+          </span>
+          <span class="text-xs font-semibold text-[#221F2C] dark:text-white" data-lang-en="Automatic Discovery" data-lang-ru="Автоматический поиск">
+            Automatic Discovery
+          </span>
+        </div>
+        <span class="text-[11px] font-bold text-[#FF7A59] bg-[#FF7A59]/10 px-2 py-0.5 rounded-full" data-lang-en="Zero Effort" data-lang-ru="Без ручного ввода">
+          Zero Effort
+        </span>
+      </div>
+    </div>
+
+    <!-- CARD 2: Offline Geography — metric pills -->
+    <div class="odys-card p-6 sm:p-7 flex flex-col justify-between hover:translate-y-[-2px] transition-all duration-300 group">
+      <div>
+        <div class="w-12 h-12 rounded-2xl bg-[#38BDF8]/10 text-[#38BDF8] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+          <Icon name="earth" class="w-6 h-6" />
+        </div>
+        <h3 class="text-xl font-bold text-[#221F2C] dark:text-white mb-2" data-lang-en="100% Offline Geography" data-lang-ru="100% офлайн-география">
+          100% Offline Geography
+        </h3>
+        <p class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed mb-6" data-lang-en="Your photos never leave your iPhone. No cloud server accounts, no tracking cookies, and no data harvesting." data-lang-ru="Ваши фотографии никогда не покидают iPhone. Никаких серверов, аккаунтов и сбора данных.">
+          Your photos never leave your iPhone. No cloud server accounts, no tracking cookies, and no data harvesting.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2 pt-2 border-t border-black/5 dark:border-white/10 text-center">
+        <div class="p-2 rounded-xl bg-black/[0.02] dark:bg-white/5">
+          <div class="text-base font-extrabold text-[#221F2C] dark:text-white">238</div>
+          <div class="text-[10px] text-[#6A647E] dark:text-[#928C9D]" data-lang-en="Countries" data-lang-ru="Стран">Countries</div>
+        </div>
+        <div class="p-2 rounded-xl bg-black/[0.02] dark:bg-white/5">
+          <div class="text-base font-extrabold text-[#221F2C] dark:text-white">34k</div>
+          <div class="text-[10px] text-[#6A647E] dark:text-[#928C9D]" data-lang-en="Cities" data-lang-ru="Городов">Cities</div>
+        </div>
+        <div class="p-2 rounded-xl bg-black/[0.02] dark:bg-white/5">
+          <div class="text-base font-extrabold text-[#4ADE80]">100%</div>
+          <div class="text-[10px] text-[#6A647E] dark:text-[#928C9D]" data-lang-en="Offline" data-lang-ru="Офлайн">Offline</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: Face ID lock toggle -->
+    <div class="odys-card p-6 sm:p-7 flex flex-col justify-between hover:translate-y-[-2px] transition-all duration-300 group">
+      <div>
+        <div class="w-12 h-12 rounded-2xl bg-[#4ADE80]/10 text-[#4ADE80] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+          <Icon name="face-expression" class="w-6 h-6" />
+        </div>
+        <h3 class="text-xl font-bold text-[#221F2C] dark:text-white mb-2" data-lang-en="Face ID App Lock" data-lang-ru="Защита по Face ID">
+          Face ID App Lock
+        </h3>
+        <p class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed mb-6" data-lang-en="Lock your personal travel journal behind Face ID or passcode so your memories remain strictly your own." data-lang-ru="Защитите ваш дневник путешествий через Face ID или код-пароль — ваши воспоминания только ваши.">
+          Lock your personal travel journal behind Face ID or passcode so your memories remain strictly your own.
+        </p>
+      </div>
+
+      <div class="p-3.5 rounded-2xl bg-black/[0.03] dark:bg-black/30 border border-black/5 dark:border-white/10 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 text-xs font-semibold text-[#221F2C] dark:text-white min-w-0">
+          <Icon name="face-smile" id="lock-icon-open" class="w-4 h-4 text-[#4ADE80] shrink-0" />
+          <Icon name="face-expression" id="lock-icon-closed" class="w-4 h-4 text-[#FF7A59] shrink-0 hidden" />
+          <span id="lock-status-label" data-lang-en="App Switcher Shield On" data-lang-ru="Защита экрана включена">
+            App Switcher Shield On
+          </span>
+        </div>
+        <button
+          type="button"
+          id="lock-toggle-btn"
+          class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white dark:bg-white/10 hover:bg-black/5 dark:hover:bg-white/20 transition-colors cursor-pointer text-[#221F2C] dark:text-white shrink-0"
+          data-lang-en="Test"
+          data-lang-ru="Тест"
+        >
+          Test
+        </button>
+      </div>
+    </div>
+
+    <!-- CARD 4: Journey player (spans 2) -->
+    <div class="md:col-span-2 odys-card p-6 sm:p-7 flex flex-col justify-between hover:translate-y-[-2px] transition-all duration-300">
+      <div>
+        <div class="flex items-center justify-between mb-4 gap-3 flex-wrap">
+          <div class="w-12 h-12 rounded-2xl bg-[#A78BFA]/10 text-[#A78BFA] flex items-center justify-center">
+            <Icon name="compass" class="w-6 h-6" />
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              id="journey-play-btn"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-white/10 hover:bg-black/5 dark:hover:bg-white/20 text-xs font-bold text-[#221F2C] dark:text-white border border-black/5 dark:border-white/10 transition-colors cursor-pointer"
+              title="Toggle animation playback"
+            >
+              <Icon name="pause" id="journey-icon-pause" class="w-3.5 h-3.5" />
+              <Icon name="play" id="journey-icon-play" class="w-3.5 h-3.5 hidden" />
+              <span id="journey-play-label" data-lang-en="Pause" data-lang-ru="Пауза">Pause</span>
+            </button>
+
+            <button
+              type="button"
+              id="journey-speed-btn"
+              class="px-2.5 py-1.5 rounded-xl bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-xs font-bold text-[#FF7A59] transition-colors cursor-pointer"
+              title="Playback speed"
+            >
+              1x
+            </button>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-[#221F2C] dark:text-white mb-2" data-lang-en="Animated Flight Timeline" data-lang-ru="Анимированные перелёты">
+          Animated Flight Timeline
+        </h3>
+        <p class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed mb-6 max-w-xl" data-lang-en="Replay every journey you've taken as glowing flight paths connecting visited cities across continents." data-lang-ru="Пересматривайте ваши путешествия в виде светящихся дуг перелётов между городами и континентами.">
+          Replay every journey you've taken as glowing flight paths connecting visited cities across continents.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <div class="relative w-full h-2 rounded-full bg-black/5 dark:bg-white/10 overflow-hidden">
+          <div
+            id="journey-progress-bar"
+            class="h-full bg-gradient-to-r from-[#FF7A59] via-[#A78BFA] to-[#38BDF8] rounded-full transition-[width] duration-200 ease-linear"
+            style="width: 65%"
+          ></div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-black/[0.03] dark:bg-black/30 border border-black/5 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span id="node-egypt" class="px-2.5 py-1 rounded-lg transition-all bg-[#FF7A59]/15 text-[#FF7A59]" data-lang-en="Egypt 🇪🇬" data-lang-ru="Египет 🇪🇬">Egypt 🇪🇬</span>
+            <Icon name="arrow-right" class="w-3.5 h-3.5 text-[#8E88A4]" />
+            <span id="node-iceland" class="px-2.5 py-1 rounded-lg transition-all bg-[#38BDF8] text-white shadow-sm" data-lang-en="Iceland 🇮🇸" data-lang-ru="Исландия 🇮🇸">Iceland 🇮🇸</span>
+            <Icon name="arrow-right" class="w-3.5 h-3.5 text-[#8E88A4]" />
+            <span id="node-japan" class="px-2.5 py-1 rounded-lg transition-all bg-[#A78BFA]/15 text-[#A78BFA]" data-lang-en="Japan 🇯🇵" data-lang-ru="Япония 🇯🇵">Japan 🇯🇵</span>
+          </div>
+
+          <div class="flex items-center gap-2 text-[#FF7A59]">
+            <Icon name="paper-plane" class="w-3.5 h-3.5 animate-pulse" />
+            <span class="font-mono tabular-nums">56 699 km</span>
+            <span class="text-[10px] text-[#6A647E] dark:text-[#928C9D]" data-lang-en="(1.4x around Earth)" data-lang-ru="(1.4x вокруг Земли)">
+              (1.4x around Earth)
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5: Share story -->
+    <div class="odys-card p-6 sm:p-7 flex flex-col justify-between hover:translate-y-[-2px] transition-all duration-300">
+      <div>
+        <div class="w-12 h-12 rounded-2xl bg-[#FFA07A]/15 text-[#FFA07A] flex items-center justify-center mb-5">
+          <Icon name="share" class="w-6 h-6" />
+        </div>
+        <h3 class="text-xl font-bold text-[#221F2C] dark:text-white mb-2" data-lang-en="Share Sleek Stories" data-lang-ru="Делитесь в Stories">
+          Share Sleek Stories
+        </h3>
+        <p class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed mb-6" data-lang-en="Export high-resolution story cards with your countries list and milestones for Instagram, Telegram, and friends." data-lang-ru="Экспортируйте стильные открытки с вашим списком стран для Instagram, Telegram и друзей.">
+          Export high-resolution story cards with your countries list and milestones for Instagram, Telegram, and friends.
+        </p>
+      </div>
+
+      <div class="p-3.5 rounded-2xl bg-gradient-to-tr from-[#A78BFA]/10 to-[#FF7A59]/10 border border-black/5 dark:border-white/10 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 min-w-0">
+          <div class="flex -space-x-1 text-sm select-none">
+            <span>🇪🇬</span><span>🇮🇸</span><span>🇯🇵</span>
+          </div>
+          <span class="text-xs font-semibold text-[#221F2C] dark:text-white truncate" data-lang-en="Year in Review" data-lang-ru="Итоги года">
+            Year in Review
+          </span>
+        </div>
+
+        <button
+          type="button"
+          id="share-story-btn"
+          class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-lg bg-[#FF7A59] text-white hover:bg-[#FF6740] transition-colors cursor-pointer shadow-sm shrink-0"
+        >
+          <Icon name="sparkle" id="share-icon-spark" class="w-3 h-3" />
+          <Icon name="check" id="share-icon-check" class="w-3 h-3 hidden" />
+          <span id="share-story-label" data-lang-en="Share" data-lang-ru="Поделиться">Share</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function initBentoInteractions() {
+    const isRu = () => (localStorage.getItem('lang') || 'en') === 'ru';
+
+    let isLocked = false;
+    const lockBtn = document.getElementById('lock-toggle-btn');
+    const lockLabel = document.getElementById('lock-status-label');
+    const lockOpen = document.getElementById('lock-icon-open');
+    const lockClosed = document.getElementById('lock-icon-closed');
+
+    function syncLockUI() {
+      if (!lockBtn || !lockLabel) return;
+      if (isLocked) {
+        lockOpen?.classList.add('hidden');
+        lockClosed?.classList.remove('hidden');
+        lockLabel.setAttribute('data-lang-en', 'Locked with Face ID');
+        lockLabel.setAttribute('data-lang-ru', 'Заблокировано Face ID');
+        lockLabel.textContent = isRu() ? 'Заблокировано Face ID' : 'Locked with Face ID';
+        lockBtn.setAttribute('data-lang-en', 'Unlock');
+        lockBtn.setAttribute('data-lang-ru', 'Открыть');
+        lockBtn.textContent = isRu() ? 'Открыть' : 'Unlock';
+      } else {
+        lockClosed?.classList.add('hidden');
+        lockOpen?.classList.remove('hidden');
+        lockLabel.setAttribute('data-lang-en', 'App Switcher Shield On');
+        lockLabel.setAttribute('data-lang-ru', 'Защита экрана включена');
+        lockLabel.textContent = isRu() ? 'Защита экрана включена' : 'App Switcher Shield On';
+        lockBtn.setAttribute('data-lang-en', 'Test');
+        lockBtn.setAttribute('data-lang-ru', 'Тест');
+        lockBtn.textContent = isRu() ? 'Тест' : 'Test';
+      }
+    }
+
+    lockBtn?.addEventListener('click', () => {
+      isLocked = !isLocked;
+      syncLockUI();
+    });
+
+    let isPlaying = true;
+    let journeyProgress = 65;
+    let speedMultiplier = 1;
+    let journeyTimer = null;
+
+    const progressBar = document.getElementById('journey-progress-bar');
+    const playBtn = document.getElementById('journey-play-btn');
+    const playLabel = document.getElementById('journey-play-label');
+    const iconPause = document.getElementById('journey-icon-pause');
+    const iconPlay = document.getElementById('journey-icon-play');
+    const speedBtn = document.getElementById('journey-speed-btn');
+    const nodeEgypt = document.getElementById('node-egypt');
+    const nodeIceland = document.getElementById('node-iceland');
+    const nodeJapan = document.getElementById('node-japan');
+
+    function setNodeActive(el, active, activeClass, idleClass) {
+      if (!el) return;
+      el.className = `px-2.5 py-1 rounded-lg transition-all ${active ? activeClass : idleClass}`;
+    }
+
+    function syncJourneyNodes() {
+      setNodeActive(
+        nodeEgypt,
+        journeyProgress < 35,
+        'bg-[#FF7A59] text-white shadow-sm',
+        'bg-[#FF7A59]/15 text-[#FF7A59]'
+      );
+      setNodeActive(
+        nodeIceland,
+        journeyProgress >= 35 && journeyProgress < 70,
+        'bg-[#38BDF8] text-white shadow-sm',
+        'bg-[#38BDF8]/15 text-[#38BDF8]'
+      );
+      setNodeActive(
+        nodeJapan,
+        journeyProgress >= 70,
+        'bg-[#A78BFA] text-white shadow-sm',
+        'bg-[#A78BFA]/15 text-[#A78BFA]'
+      );
+      if (progressBar) progressBar.style.width = `${journeyProgress}%`;
+    }
+
+    function syncPlayUI() {
+      if (!playLabel) return;
+      if (isPlaying) {
+        iconPlay?.classList.add('hidden');
+        iconPause?.classList.remove('hidden');
+        playLabel.setAttribute('data-lang-en', 'Pause');
+        playLabel.setAttribute('data-lang-ru', 'Пауза');
+        playLabel.textContent = isRu() ? 'Пауза' : 'Pause';
+      } else {
+        iconPause?.classList.add('hidden');
+        iconPlay?.classList.remove('hidden');
+        playLabel.setAttribute('data-lang-en', 'Play');
+        playLabel.setAttribute('data-lang-ru', 'Старт');
+        playLabel.textContent = isRu() ? 'Старт' : 'Play';
+      }
+    }
+
+    function stopJourney() {
+      if (journeyTimer) {
+        clearInterval(journeyTimer);
+        journeyTimer = null;
+      }
+    }
+
+    function startJourney() {
+      stopJourney();
+      if (!isPlaying) return;
+      const intervalTime = speedMultiplier === 4 ? 60 : 200;
+      journeyTimer = setInterval(() => {
+        journeyProgress = journeyProgress >= 100 ? 10 : journeyProgress + 2;
+        syncJourneyNodes();
+      }, intervalTime);
+    }
+
+    playBtn?.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      syncPlayUI();
+      if (isPlaying) startJourney();
+      else stopJourney();
+    });
+
+    speedBtn?.addEventListener('click', () => {
+      speedMultiplier = speedMultiplier === 1 ? 4 : 1;
+      if (speedBtn) speedBtn.textContent = `${speedMultiplier}x`;
+      if (isPlaying) startJourney();
+    });
+
+    const shareBtn = document.getElementById('share-story-btn');
+    const shareLabel = document.getElementById('share-story-label');
+    const shareSpark = document.getElementById('share-icon-spark');
+    const shareCheck = document.getElementById('share-icon-check');
+    let shareResetTimer = null;
+
+    shareBtn?.addEventListener('click', () => {
+      shareSpark?.classList.add('hidden');
+      shareCheck?.classList.remove('hidden');
+      if (shareLabel) {
+        shareLabel.setAttribute('data-lang-en', 'Copied!');
+        shareLabel.setAttribute('data-lang-ru', 'Готово!');
+        shareLabel.textContent = isRu() ? 'Готово!' : 'Copied!';
+      }
+      if (shareResetTimer) clearTimeout(shareResetTimer);
+      shareResetTimer = setTimeout(() => {
+        shareCheck?.classList.add('hidden');
+        shareSpark?.classList.remove('hidden');
+        if (shareLabel) {
+          shareLabel.setAttribute('data-lang-en', 'Share');
+          shareLabel.setAttribute('data-lang-ru', 'Поделиться');
+          shareLabel.textContent = isRu() ? 'Поделиться' : 'Share';
+        }
+      }, 2000);
+    });
+
+    syncJourneyNodes();
+    syncPlayUI();
+    startJourney();
+
+    const section = document.getElementById('features');
+    if (section && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          const visible = entries.some((e) => e.isIntersecting);
+          if (visible && isPlaying) startJourney();
+          else stopJourney();
+        },
+        { threshold: 0.15 }
+      );
+      io.observe(section);
+    }
+  })();
+</script>

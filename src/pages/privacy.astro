@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LegalTabs from '../components/LegalTabs.astro';
+---
+
+<Layout
+  title="Privacy Policy — Odys Travel"
+  description="Privacy Policy for Odys Travel: on-device processing, no tracking, no server uploads."
+>
+  <Header />
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="odys-card p-8 sm:p-12">
+      <a href="/odys/" class="inline-flex items-center gap-2 text-xs font-bold text-[#FF7A59] mb-6 hover:underline">
+        ← Back to Odys Travel
+      </a>
+      <LegalTabs active="privacy" />
+
+      <div class="flex items-center gap-2 text-xs font-bold text-[#4ADE80] uppercase tracking-wider mb-2">
+        <span>App Store Compliant · Effective November 4, 2026</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold mb-4">Privacy Policy for Odys Travel</h1>
+      <p class="text-sm text-[#6A647E] dark:text-[#928C9D] mb-8 pb-6 border-b border-black/5 dark:border-white/5 space-y-1">
+        <span class="block"><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Effective Date:</strong> November 4, 2026</span>
+        <span class="block"><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Developer:</strong> Dmitry Sinkevich</span>
+        <span class="block"><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Contact:</strong> <a href="mailto:dmitry8.work@gmail.com" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a></span>
+      </p>
+
+      <div class="legal-prose space-y-8 text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed">
+        <p>
+          This Privacy Policy explains how Odys Travel (“the App”, “we”, “us”) handles information when you use the App on your Apple device.
+        </p>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">1. Our Privacy-First Approach</h2>
+          <p class="mb-3">
+            Odys Travel is designed to work locally on your device. We do not operate backend servers, maintain user accounts, or maintain a central database of user information.
+          </p>
+          <p>
+            We do not sell, rent, trade, or share your personal data with third parties for advertising, marketing, profiling, or any other commercial purpose.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">2. Information We Process</h2>
+          <p class="mb-3">
+            Depending on the features you use, Odys Travel may process the following information locally on your device:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 mb-3">
+            <li>Photo and video metadata, including capture date and time.</li>
+            <li>GPS coordinates and location metadata embedded in photos or videos.</li>
+            <li>Derived travel information, such as visited countries, cities, regions, dates, and routes.</li>
+            <li>Content you create in the App, such as notes, trips, favorites, tags, and settings.</li>
+            <li>Device settings and preferences needed to operate the App.</li>
+          </ul>
+          <p>
+            Odys Travel does not upload your original photo or video files, their pixels, or their metadata to any server operated by us.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">3. Photo Library Access</h2>
+          <p class="mb-3">
+            If you grant access to your photo library, Odys Travel reads photo and video metadata only to identify when and where media items were captured. This processing occurs on your device.
+          </p>
+          <p>
+            You can grant, limit, or revoke photo library access at any time in the iOS Settings app under <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Privacy &amp; Security &gt; Photos &gt; Odys Travel</strong>. If you revoke access, features that depend on photo metadata may not work.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">4. Location Information</h2>
+          <p class="mb-3">
+            Odys Travel may read location information embedded in your photos or videos to determine the places you have visited. We do not collect your continuous real-time location unless you explicitly enable a feature that requires it.
+          </p>
+          <p>
+            Location information is used solely to create and display your travel history within the App.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">5. Data Storage and Retention</h2>
+          <p class="mb-3">
+            Your travel data, imported photo metadata, locations, countries, cities, notes, trips, favorites, and App settings are stored locally on your device.
+          </p>
+          <p class="mb-3">
+            We do not retain this information on servers controlled by us.
+          </p>
+          <p class="mb-3">
+            You can delete individual trips, places, notes, or other records within the App. You can also delete all locally stored App data by uninstalling Odys Travel from your device.
+          </p>
+          <p>
+            If you enable iCloud synchronization or backup, applicable data may be stored in your personal iCloud account. That data is handled by Apple under Apple’s privacy practices. We do not receive a separate copy of your iCloud data.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">6. Face ID, Touch ID, and Passcode</h2>
+          <p class="mb-3">
+            If you enable App Lock, authentication is performed by iOS using Apple’s LocalAuthentication framework.
+          </p>
+          <p>
+            Your Face ID, Touch ID, fingerprint, passcode, and related biometric data are managed by Apple and the device operating system. Odys Travel does not access, collect, store, or transmit your biometric data.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">7. Third Parties and Tracking</h2>
+          <p class="mb-3">
+            Odys Travel does not include advertising networks, third-party analytics SDKs, behavioral trackers, data brokers, or social media tracking technologies.
+          </p>
+          <p class="mb-3">
+            We do not track you across other apps, websites, or services.
+          </p>
+          <p>
+            If the App uses Apple-provided system services, such as MapKit, CloudKit, or iCloud, those services are provided by Apple and are governed by Apple’s own privacy policies and terms.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">8. Children’s Privacy</h2>
+          <p class="mb-3">
+            Odys Travel is not directed to children under the age of 13, or the equivalent minimum age in your jurisdiction. We do not knowingly collect personal information from children.
+          </p>
+          <p>
+            Because the App processes travel data locally and does not create user accounts, we do not knowingly maintain databases of children’s personal information.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">9. Your Rights and Choices</h2>
+          <p class="mb-3">
+            You control the information processed by Odys Travel because it remains on your device.
+          </p>
+          <p class="mb-3">You may:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-3">
+            <li>Revoke photo library access in iOS Settings.</li>
+            <li>Disable App Lock at any time.</li>
+            <li>Delete individual records within the App.</li>
+            <li>Delete all locally stored data by uninstalling the App.</li>
+            <li>Contact us with questions about this Privacy Policy.</li>
+          </ul>
+          <p>
+            If you are located in the European Economic Area, the United Kingdom, or another jurisdiction with similar data protection laws, you may have rights to access, correct, delete, or restrict processing of your personal data. Since Odys Travel does not maintain server-side user accounts or databases, requests relating to data held by us can be sent to <a href="mailto:dmitry8.work@gmail.com" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">10. Changes to This Policy</h2>
+          <p class="mb-3">
+            We may update this Privacy Policy from time to time to reflect changes in the App, applicable laws, or our practices. The “Effective Date” at the top of this page indicates when the current version became effective.
+          </p>
+          <p>
+            If we make material changes, we will update this page and, where appropriate, provide notice within the App.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">11. Contact Us</h2>
+          <p class="mb-3">
+            If you have questions, concerns, or requests regarding this Privacy Policy, contact:
+          </p>
+          <p>
+            <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Dmitry Sinkevich</strong><br />
+            Email: <a href="mailto:dmitry8.work@gmail.com" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

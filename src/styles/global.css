@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "SF Pro Rounded", system-ui, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    
+    --ink: #221F2C;
+    --ink-soft: #6A647E;
+    --coral: #FF7A59;
+    --peach: #FFA07A;
+    --lavender: #A78BFA;
+    --cyan: #38BDF8;
+    --green: #4ADE80;
+
+    --mesh-0: rgb(255, 232, 214); 
+    --mesh-1: rgb(255, 230, 235);
+    --mesh-2: rgb(237, 232, 255);
+    --mesh-3: rgb(255, 237, 224);
+    --mesh-4: rgb(252, 235, 245); 
+    --mesh-5: rgb(230, 237, 255);
+    --mesh-6: rgb(224, 247, 237);
+    --mesh-7: rgb(235, 237, 255);
+    --mesh-8: rgb(237, 224, 252); 
+
+    --bg-main: rgb(252, 235, 245);
+    --bg-card: rgba(255, 255, 255, 0.82);
+    --card-border: rgba(255, 255, 255, 0.7);
+    --card-shadow: 0 16px 40px -12px rgba(34, 31, 44, 0.08);
+  }
+
+  .dark {
+    --ink: #F5F3FA;
+    --ink-soft: #928C9D;
+    --coral: #FF7A59;
+    --peach: #FF8F70;
+    --lavender: #B8A6F5;
+    --cyan: #38BDF8;
+    --green: #4ADE80;
+
+    --mesh-0: rgb(43, 28, 31);   
+    --mesh-1: rgb(31, 19, 26); 
+    --mesh-2: rgb(26, 24, 43);  
+    --mesh-3: rgb(19, 19, 19);  
+    --mesh-4: rgb(19, 19, 19); 
+    --mesh-5: rgb(19, 20, 29);  
+    --mesh-6: rgb(17, 33, 31);  
+    --mesh-7: rgb(19, 19, 22);  
+    --mesh-8: rgb(33, 23, 43); 
+
+    --bg-main: rgb(19, 19, 19);
+    --bg-card: rgba(26, 23, 36, 0.75);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6);
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background-color: var(--bg-main);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.odys-mesh-bg {
+  background-color: var(--bg-main);
+  background-image:
+    radial-gradient(circle at 0% 0%, var(--mesh-0) 0%, transparent 60%),
+    radial-gradient(circle at 50% 0%, var(--mesh-1) 0%, transparent 55%),
+    radial-gradient(circle at 100% 0%, var(--mesh-2) 0%, transparent 60%),
+    radial-gradient(circle at 0% 50%, var(--mesh-3) 0%, transparent 55%),
+    radial-gradient(circle at 55% 45%, var(--mesh-4) 0%, transparent 55%),
+    radial-gradient(circle at 100% 50%, var(--mesh-5) 0%, transparent 55%),
+    radial-gradient(circle at 0% 100%, var(--mesh-6) 0%, transparent 60%),
+    radial-gradient(circle at 50% 100%, var(--mesh-7) 0%, transparent 55%),
+    radial-gradient(circle at 100% 100%, var(--mesh-8) 0%, transparent 60%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.odys-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 28px;
+}
+
+.odys-pill {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 30px -8px rgba(34, 31, 44, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  border-radius: 9999px;
+}
+
+.dark .odys-pill {
+  background: rgba(26, 23, 36, 0.72);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 2px 8px -2px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes mesh-pulse {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.45; }
+  50% { transform: scale(1.12) translate(25px, -20px); opacity: 0.65; }
+  100% { transform: scale(1) translate(0, 0); opacity: 0.45; }
+}
+
+.ambient-glow-1 {
+  animation: mesh-pulse 16s ease-in-out infinite alternate;
+}
+
+.ambient-glow-2 {
+  animation: mesh-pulse 22s ease-in-out infinite alternate-reverse;
+}

@@ -1,0 +1,164 @@
+---
+import Icon from './Icon.astro';
+
+const mascots = [
+  {
+    id: 'bear',
+    name: 'Wander Bear',
+    nameRu: 'Медведь Странник',
+    tagline: 'Default companion · Calm & steady',
+    taglineRu: 'Основной спутник · Спокойный и надёжный',
+    image: '/odys/assets/aistudio/bear_3x_316cd080.png',
+  },
+  {
+    id: 'stamp',
+    name: 'Passport Stamp',
+    nameRu: 'Паспортный Штамп',
+    tagline: 'Milestone collector · Vintage visa aesthetic',
+    taglineRu: 'Коллекционер отметок · Эстетика визовых штампов',
+    image: '/odys/assets/aistudio/stamp_3x_f9111e84.png',
+  },
+  {
+    id: 'hedgehog',
+    name: 'Trail Hedgehog',
+    nameRu: 'Ёжик Следопыт',
+    tagline: 'Alpine wanderer · Loves forest routes',
+    taglineRu: 'Альпийский путешественник · Любит горные тропы',
+    image: '/odys/assets/aistudio/hedgehog_3x_d36ad7ce.png',
+  },
+  {
+    id: 'seal',
+    name: 'Coastal Seal',
+    nameRu: 'Морской Котик',
+    tagline: 'Ocean explorer · Chills on sunny harbors',
+    taglineRu: 'Исследователь океанов · Отдыхает в тёплых гаванях',
+    image: '/odys/assets/aistudio/seal_3x_b3748082.png',
+  },
+  {
+    id: 'neon',
+    name: 'Cyber Neon',
+    nameRu: 'Кибер Неон',
+    tagline: 'Night flight traveler · Shines in dark mode',
+    taglineRu: 'Ночной путешественник · Светится в темноте',
+    image: '/odys/assets/aistudio/neon_3x_1819f8be.png',
+  },
+  {
+    id: 'scroll',
+    name: 'Ancient Scroll',
+    nameRu: 'Древний Свиток',
+    tagline: 'Cartographer spirit · Old parchment magic',
+    taglineRu: 'Дух картографа · Магия старинного пергамента',
+    image: '/odys/assets/aistudio/scroll_3x_2a302c30.png',
+  },
+  {
+    id: 'hammock',
+    name: 'Island Hammock',
+    nameRu: 'Островной Гамак',
+    tagline: 'Slow travel lover · Tropical breeze vibe',
+    taglineRu: 'Любитель медленных поездок · Тропический бриз',
+    image: '/odys/assets/aistudio/hammock_3x_3bf14ff8.png',
+  },
+];
+---
+
+<section id="mascots" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="text-center max-w-2xl mx-auto mb-12">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 dark:bg-white/10 text-xs font-bold text-[#FF7A59] mb-4">
+      <span data-lang-en="Personalize Your Odys" data-lang-ru="Персонализируйте Odys">Personalize Your Odys</span>
+    </div>
+    <h2
+      class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4"
+      data-lang-en="Choose your travel companion"
+      data-lang-ru="Выберите спутника для ваших поездок"
+    >
+      Choose your travel companion
+    </h2>
+    <p
+      class="text-base text-[#6A647E] dark:text-[#928C9D]"
+      data-lang-en="Each mascot lives right on your iOS home screen as an alternate app icon."
+      data-lang-ru="Каждый спутник может стать вашей альтернативной иконкой приложения на домашнем экране iOS."
+    >
+      Each mascot lives right on your iOS home screen as an alternate app icon.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- 7 Companion Buttons -->
+    <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {mascots.map((m, idx) => (
+        <button
+          type="button"
+          onclick={`selectMascot(${idx})`}
+          id={`mascot-btn-${idx}`}
+          class={`mascot-card text-left p-4 rounded-3xl border transition-all cursor-pointer ${
+            idx === 0
+              ? 'bg-[#FF7A59]/10 border-[#FF7A59] shadow-md ring-2 ring-[#FF7A59]/30'
+              : 'bg-white/60 dark:bg-[#1D1A27]/60 border-black/5 dark:border-white/5 hover:bg-white dark:hover:bg-[#1D1A27]'
+          }`}
+        >
+          <div class="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3">
+            <img
+              src={m.image}
+              alt={m.name}
+              class="w-full h-full object-contain rounded-2xl drop-shadow-md pixelated"
+            />
+          </div>
+          <div class="text-center">
+            <h4 class="font-bold text-xs sm:text-sm text-[#221F2C] dark:text-[#F5F3FA] leading-tight">
+              {m.name}
+            </h4>
+          </div>
+        </button>
+      ))}
+    </div>
+
+    <!-- Active Companion Preview Card -->
+    <div class="lg:col-span-4">
+      <div class="odys-card p-8 text-center border relative overflow-hidden">
+        <div class="w-32 h-32 mx-auto mb-6 relative">
+          <img
+            id="mascot-active-img"
+            src="/odys/assets/aistudio/bear_3x_316cd080.png"
+            alt="Active Companion"
+            class="w-full h-full object-contain rounded-3xl drop-shadow-xl pixelated"
+          />
+        </div>
+        <h3 id="mascot-active-name" class="text-2xl font-extrabold mb-2 text-[#221F2C] dark:text-[#F5F3FA]">
+          Wander Bear
+        </h3>
+        <p id="mascot-active-desc" class="text-sm text-[#6A647E] dark:text-[#928C9D] mb-6">
+          Default companion · Calm & steady
+        </p>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FF7A59] text-white text-xs font-bold shadow-md">
+          <Icon name="check" class="w-4 h-4" />
+          <span data-lang-en="Ready on iOS Home Screen" data-lang-ru="Доступен на экране «Домой»">Ready on iOS Home Screen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vanilla JS Mascot Switcher -->
+<script is:inline define:vars={{ mascots }}>
+  function selectMascot(idx) {
+    const m = mascots[idx];
+    const isRu = (localStorage.getItem('lang') || 'en') === 'ru';
+    
+    document.querySelectorAll('.mascot-card').forEach((btn, i) => {
+      if (i === idx) {
+        btn.className = 'mascot-card text-left p-4 rounded-3xl border transition-all cursor-pointer bg-[#FF7A59]/10 border-[#FF7A59] shadow-md ring-2 ring-[#FF7A59]/30';
+      } else {
+        btn.className = 'mascot-card text-left p-4 rounded-3xl border transition-all cursor-pointer bg-white/60 dark:bg-[#1D1A27]/60 border-black/5 dark:border-white/5 hover:bg-white dark:hover:bg-[#1D1A27]';
+      }
+    });
+
+    const img = document.getElementById('mascot-active-img');
+    const name = document.getElementById('mascot-active-name');
+    const desc = document.getElementById('mascot-active-desc');
+
+    if (img) img.src = m.image;
+    if (name) name.textContent = isRu ? m.nameRu : m.name;
+    if (desc) desc.textContent = isRu ? m.taglineRu : m.tagline;
+  }
+  window.selectMascot = selectMascot;
+</script>

@@ -1,0 +1,122 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Odys Travel — Your Travels, Your Business. Private Scratch Map",
+  description = "Turn your iPhone photo library into an interactive travel scratch map and animated journey timeline. 100% on-device, zero tracking, zero servers."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Odys Travel, travel scratch map, photo map, iOS travel tracker, offline world map, travel timeline, private travel journal" />
+    <meta name="author" content="Dmitry Sinkevich" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://odystravel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Odys Travel" />
+    <meta property="og:title" content="Odys Travel — Private On-Device Scratch Map for iOS" />
+    <meta property="og:description" content="Find every country, region, and city you've visited in seconds. 100% offline, zero server uploads, pure privacy." />
+    <link rel="icon" type="image/png" href="/odys/assets/images/app-icon.png" />
+    <meta property="og:url" content="https://odystravel.app/" />
+    <meta property="og:image" content="/assets/images/app-icon.png" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Odys Travel — Private Travel Scratch Map" />
+    <meta name="twitter:description" content="Turn your photo metadata into an interactive world map. 34,000 offline cities, zero tracking." />
+    <meta name="twitter:image" content="/assets/images/app-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org SoftwareApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Odys Travel",
+      "operatingSystem": "iOS 18.0 or later",
+      "applicationCategory": "TravelApplication",
+      "author": {
+        "@type": "Person",
+        "name": "Dmitry Sinkevich"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Private on-device travel scratch map and journey timeline generated from iPhone photo metadata without uploading any pictures to cloud servers."
+    }
+    </script>
+
+    <!-- Theme initialization script (0ms FOUC prevention) -->
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return 'light'; 
+      })();
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class="antialiased selection:bg-[#FF8566]/20 selection:text-[#3B364F] min-h-screen text-[#221F2C] dark:text-[#F5F3FA] odys-mesh-bg transition-colors duration-500">
+    <!-- Ambient background glow corresponding to SwiftUI MeshGradient corners -->
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+      <div class="absolute -top-32 -left-32 w-[34rem] h-[34rem] rounded-full bg-[var(--mesh-0)]/60 dark:bg-[var(--mesh-0)]/40 filter blur-[130px] ambient-glow-1"></div>
+      <div class="absolute top-10 -right-32 w-[36rem] h-[36rem] rounded-full bg-[var(--mesh-2)]/60 dark:bg-[var(--mesh-2)]/40 filter blur-[150px] ambient-glow-2"></div>
+      <div class="absolute bottom-20 -left-20 w-[30rem] h-[30rem] rounded-full bg-[var(--mesh-6)]/50 dark:bg-[var(--mesh-6)]/30 filter blur-[140px] ambient-glow-2"></div>
+      <div class="absolute -bottom-20 -right-20 w-[32rem] h-[32rem] rounded-full bg-[var(--mesh-8)]/50 dark:bg-[var(--mesh-8)]/30 filter blur-[140px] ambient-glow-1"></div>
+    </div>
+
+    <slot />
+
+    <!-- Global Client Script for Theme & Language switching without external libraries -->
+    <script is:inline>
+      function toggleTheme() {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      }
+      window.toggleTheme = toggleTheme;
+
+      let currentLang = localStorage.getItem('lang') || 'en';
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.querySelectorAll('[data-lang-en]').forEach(el => {
+          el.innerHTML = lang === 'ru' ? el.getAttribute('data-lang-ru') : el.getAttribute('data-lang-en');
+        });
+        const langLabel = document.getElementById('lang-label');
+        if (langLabel) langLabel.textContent = lang.toUpperCase();
+      }
+      function toggleLang() {
+        setLanguage(currentLang === 'en' ? 'ru' : 'en');
+      }
+      window.toggleLang = toggleLang;
+
+      document.addEventListener('DOMContentLoaded', () => {
+        if (currentLang === 'ru') setLanguage('ru');
+      });
+    </script>
+  </body>
+</html>
