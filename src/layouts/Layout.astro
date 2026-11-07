@@ -22,29 +22,25 @@ const {
     <meta name="keywords" content="Odys Travel, travel scratch map, photo map, iOS travel tracker, offline world map, travel timeline, private travel journal" />
     <meta name="author" content="Dmitry Sinkevich" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://odystravel.app/" />
+    <link rel="canonical" href="https://disin8.github.io/odys/" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Odys Travel" />
     <meta property="og:title" content="Odys Travel — Private On-Device Scratch Map for iOS" />
     <meta property="og:description" content="Find every country, region, and city you've visited in seconds. 100% offline, zero server uploads, pure privacy." />
     <link rel="icon" type="image/png" href="/odys/assets/images/app-icon.png" />
-    <meta property="og:url" content="https://odystravel.app/" />
+    <meta property="og:url" content="https://disin8.github.io/odys/" />
     <meta property="og:image" content="/assets/images/app-icon.png" />
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Odys Travel — Private Travel Scratch Map" />
     <meta name="twitter:description" content="Turn your photo metadata into an interactive world map. 34,000 offline cities, zero tracking." />
     <meta name="twitter:image" content="/assets/images/app-icon.png" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Schema.org SoftwareApplication JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,7 +61,6 @@ const {
     }
     </script>
 
-    <!-- Theme initialization script (0ms FOUC prevention) -->
     <script is:inline>
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -81,7 +76,6 @@ const {
     </script>
   </head>
   <body class="antialiased selection:bg-[#FF8566]/20 selection:text-[#3B364F] min-h-screen text-[#221F2C] dark:text-[#F5F3FA] odys-mesh-bg transition-colors duration-500">
-    <!-- Ambient background glow corresponding to SwiftUI MeshGradient corners -->
     <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
       <div class="absolute -top-32 -left-32 w-[34rem] h-[34rem] rounded-full bg-[var(--mesh-0)]/60 dark:bg-[var(--mesh-0)]/40 filter blur-[130px] ambient-glow-1"></div>
       <div class="absolute top-10 -right-32 w-[36rem] h-[36rem] rounded-full bg-[var(--mesh-2)]/60 dark:bg-[var(--mesh-2)]/40 filter blur-[150px] ambient-glow-2"></div>
@@ -91,7 +85,6 @@ const {
 
     <slot />
 
-    <!-- Global Client Script for Theme & Language switching without external libraries -->
     <script is:inline>
       function toggleTheme() {
         const isDark = document.documentElement.classList.toggle('dark');

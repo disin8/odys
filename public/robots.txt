@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://odystravel.app/sitemap.xml
+Sitemap: https://disin8.github.io/odys/sitemap.xml
