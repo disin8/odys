@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LegalTabs from '../components/LegalTabs.astro';
+---
+
+<Layout
+  title="Support — Odys Travel"
+  description="Help for Odys Travel: photo access, iCloud sync, export, and contact."
+>
+  <Header />
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="odys-card p-8 sm:p-12">
+      <a href="/odys/" class="inline-flex items-center gap-2 text-xs font-bold text-[#FF7A59] mb-6 hover:underline">
+        ← Back to Odys Travel
+      </a>
+      <LegalTabs active="support" />
+
+      <div class="flex items-center gap-2 text-xs font-bold text-[#38BDF8] uppercase tracking-wider mb-2">
+        <span>Developer support</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold mb-4">Odys Travel Support</h1>
+      <p class="text-sm text-[#6A647E] dark:text-[#928C9D] mb-8 pb-6 border-b border-black/5 dark:border-white/5">
+        <a href="mailto:dmitry8.work@gmail.com?subject=Odys%20Travel%20support" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a>
+      </p>
+
+      <div class="legal-prose space-y-8 text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed">
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">Contact</h2>
+          <p class="mb-3">
+            Email <a href="mailto:dmitry8.work@gmail.com?subject=Odys%20Travel%20support" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a> with the App version (Settings → About), iPhone model, iOS version, and what you expected versus what happened.
+          </p>
+          <p>
+            Support is provided by the independent developer on a best-effort basis. It is not a service-level agreement and does not set a response time. It does not remove rights you have under consumer law or under Apple’s refund process. Developer, not Apple, provides this support. Apple has no obligation to support the App.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">Photos</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>The map is built from dates and GPS stored in photos and videos. The scan runs on the iPhone. Photo files are not uploaded.</li>
+            <li>Grant access in <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Settings &gt; Privacy &amp; Security &gt; Photos &gt; Odys Travel</strong>. Limited access only sees the photos you selected, so places can be missing. Use Select more photos or Allow full access.</li>
+            <li>Screenshots, shared images, and files without location metadata will not place a visit.</li>
+            <li>Settings → Scan my photos again rebuilds the on-device index.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">iCloud</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Sync is off until you turn on Sync with iCloud and restart the App. You must already be signed in to iCloud.</li>
+            <li>Sync covers places, trips, notes, and the wishlist. Photos and the photo index stay on the device.</li>
+            <li>Developer cannot open your iCloud data or restore it. If you need a copy you control, use Export.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">Export, import, and delete</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Settings → Export can make a JSON backup, CSV, KML, or GPX. You choose where the file goes.</li>
+            <li>Settings → Import places merges a JSON backup. It does not delete existing places.</li>
+            <li>Delete all data erases visited places and the photo index on that iPhone. It does not delete photos from the Photos library. This cannot be undone by the developer.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">App lock and the map</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Face ID is optional. iOS performs it. If it fails, use the device passcode.</li>
+            <li>Borders, cities, distances, and stay lengths are estimates. The App is a journal, not an official record.</li>
+            <li>The home-screen widget shows a local summary. It does not add a network account.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">Purchases</h2>
+          <p>
+            The App does not currently sell in-app purchases or subscriptions. If that changes, the price will be shown in the App before you pay, and any refund will go through Apple at <a href="https://reportaproblem.apple.com/" class="text-[#FF7A59] underline" rel="noopener">reportaproblem.apple.com</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">Policies</h2>
+          <p class="mb-3">
+            <a href="/odys/privacy/" class="text-[#FF7A59] underline">Privacy Policy</a> · <a href="/odys/terms/" class="text-[#FF7A59] underline">Terms of Use (EULA)</a>
+          </p>
+          <p>
+            <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Dmitry Sinkevich</strong><br />
+            <a href="mailto:dmitry8.work@gmail.com?subject=Odys%20Travel%20support" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

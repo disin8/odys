@@ -1,6 +1,6 @@
 ---
 interface Props {
-  active: 'privacy' | 'terms';
+  active: 'privacy' | 'terms' | 'support';
 }
 
 const { active } = Astro.props;
@@ -29,5 +29,14 @@ const off = `${base} bg-white/70 dark:bg-white/10 text-[#6A647E] dark:text-[#928
     data-lang-ru="Условия использования (EULA)"
   >
     Terms of Use (EULA)
+  </a>
+  <a
+    href="/odys/support/"
+    class={active === 'support' ? on : off}
+    aria-current={active === 'support' ? 'page' : undefined}
+    data-lang-en="Support"
+    data-lang-ru="Поддержка"
+  >
+    Support
   </a>
 </div>
