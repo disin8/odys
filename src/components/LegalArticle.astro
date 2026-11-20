@@ -1,0 +1,71 @@
+---
+const { doc, kickerClass = 'text-[#FF7A59]' } = Astro.props;
+const langs = ['en', 'ja', 'zh', 'ko', 'ru', 'de', 'es', 'fr'];
+
+function esc(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function renderInline(text) {
+  const re = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g;
+  let html = '';
+  let last = 0;
+  let match;
+  while ((match = re.exec(text))) {
+    html += esc(text.slice(last, match.index));
+    if (match[1]) {
+      const href = esc(match[2]);
+      const external = href.startsWith('http');
+      html += `<a href="${href}" class="text-[#FF7A59] underline"${external ? ' rel="noopener"' : ''}>${esc(match[1])}</a>`;
+    } else {
+      html += `<strong class="text-[#221F2C] dark:text-[#F5F3FA]">${esc(match[3])}</strong>`;
+    }
+    last = match.index + match[0].length;
+  }
+  html += esc(text.slice(last));
+  return html.replace(/\n/g, '<br />');
+}
+---
+
+{
+  langs.map((lang) => {
+    const page = doc[lang];
+    return (
+      <div data-lang-panel={lang} hidden={lang !== 'en'}>
+        <div class:list={['flex items-center gap-2 text-xs font-bold uppercase tracking-wider mb-2', kickerClass]}>
+          <span>{page.kicker}</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold mb-4">{page.title}</h1>
+        {
+          page.meta && (
+            <p class="text-sm text-[#6A647E] dark:text-[#928C9D] mb-8 pb-6 border-b border-black/5 dark:border-white/5 space-y-1">
+              {page.meta.map((line) => <span class="block" set:html={renderInline(line)} />)}
+            </p>
+          )
+        }
+        <div class="legal-prose space-y-8 text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed">
+          {page.blocks.map((block) => {
+            const parts = block.body || [
+              ...(block.p || []).map((paragraph) => ({ p: paragraph })),
+              ...(block.ul ? [{ ul: block.ul }] : []),
+            ];
+            return (
+              <section class="space-y-3">
+                {block.h && <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA]">{block.h}</h2>}
+                {parts.map((part) =>
+                  part.ul ? (
+                    <ul class="list-disc pl-5 space-y-2">
+                      {part.ul.map((item) => <li set:html={renderInline(item)} />)}
+                    </ul>
+                  ) : (
+                    <p set:html={renderInline(part.p)} />
+                  )
+                )}
+              </section>
+            );
+          })}
+        </div>
+      </div>
+    );
+  })
+}

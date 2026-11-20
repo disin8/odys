@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import { LANGS } from '../i18n/langs';
 ---
 
 <header class="sticky top-4 z-40 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -20,55 +21,72 @@ import Icon from './Icon.astro';
       <a
         href="/odys/#screens"
         class="hover:text-[#221F2C] dark:hover:text-white transition-colors whitespace-nowrap shrink-0"
-        data-lang-en="Screens"
-        data-lang-ru="Экраны"
+        data-i18n="nav.screens"
       >
         Screens
       </a>
       <a
         href="/odys/#features"
         class="hover:text-[#221F2C] dark:hover:text-white transition-colors whitespace-nowrap shrink-0"
-        data-lang-en="Features"
-        data-lang-ru="Возможности"
+        data-i18n="nav.features"
       >
         Features
       </a>
       <a
         href="/odys/#mascots"
         class="hover:text-[#221F2C] dark:hover:text-white transition-colors whitespace-nowrap shrink-0"
-        data-lang-en="Companions"
-        data-lang-ru="Спутники"
+        data-i18n="nav.companions"
       >
         Companions
       </a>
       <a
         href="/odys/#privacy"
         class="hover:text-[#221F2C] dark:hover:text-white transition-colors whitespace-nowrap shrink-0"
-        data-lang-en="Privacy"
-        data-lang-ru="Приватность"
+        data-i18n="nav.privacy"
       >
         Privacy
       </a>
       <a
         href="/odys/privacy/"
         class="hover:text-[#221F2C] dark:hover:text-white transition-colors whitespace-nowrap shrink-0"
-        data-lang-en="Legal & EULA"
-        data-lang-ru="Документы"
+        data-i18n="nav.legal"
       >
         Legal & EULA
       </a>
     </nav>
 
     <div class="flex items-center gap-2.5 shrink-0">
-      <button
-        type="button"
-        onclick="window.toggleLang()"
-        class="p-1.5 rounded-xl hover:bg-black/5 dark:hover:bg-white/10 text-xs font-bold text-[#6A647E] dark:text-[#928C9D] transition-colors flex items-center gap-1 cursor-pointer"
-        title="Toggle EN / RU"
-      >
-        <Icon name="language" class="w-3.5 h-3.5" />
-        <span id="lang-label" class="uppercase">EN</span>
-      </button>
+      <div id="lang-switch" class="relative">
+        <button
+          type="button"
+          id="lang-toggle"
+          class="p-1.5 rounded-xl hover:bg-black/5 dark:hover:bg-white/10 text-xs font-bold text-[#6A647E] dark:text-[#928C9D] transition-colors flex items-center gap-1 cursor-pointer"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-label="Language"
+        >
+          <Icon name="language" class="w-3.5 h-3.5" />
+          <span id="lang-label">EN</span>
+        </button>
+        <ul
+          id="lang-list"
+          role="listbox"
+          hidden
+          class="absolute right-0 top-full z-50 mt-3 w-44 overflow-hidden rounded-2xl border border-black/5 bg-white/95 py-1 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-[#1D1A27]/95"
+        >
+          {LANGS.map((lang) => (
+            <li>
+              <button
+                type="button"
+                data-lang-option={lang.id}
+                class="w-full cursor-pointer px-3 py-2 text-left text-xs font-bold text-[#221F2C] hover:bg-black/5 dark:text-[#F5F3FA] dark:hover:bg-white/10"
+              >
+                {lang.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <button
         type="button"
@@ -93,7 +111,7 @@ import Icon from './Icon.astro';
             <path d="M21.143,7.248c-2.469-.147-4.569,1.401-5.748,1.401s-2.986-1.327-4.939-1.292c-2.542,.037-4.901,1.475-6.191,3.761-2.653,4.573-.7,11.357,1.88,15.081,1.253,1.843,2.763,3.872,4.753,3.799,1.88-.074,2.617-1.217,4.902-1.217s2.947,1.217,4.937,1.18c2.064-.037,3.354-1.844,4.607-3.688,1.437-2.101,2.026-4.129,2.063-4.24-.037-.037-3.98-1.549-4.016-6.084-.037-3.797,3.095-5.603,3.243-5.716-1.769-2.616-4.533-2.911-5.491-2.985"></path>
           </g>
         </svg>
-        <span data-lang-en="Download App" data-lang-ru="Скачать">Download App</span>
+        <span data-i18n="nav.download">Download App</span>
       </a>
     </div>
   </div>

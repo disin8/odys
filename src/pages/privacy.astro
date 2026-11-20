@@ -3,165 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LegalTabs from '../components/LegalTabs.astro';
+import LegalArticle from '../components/LegalArticle.astro';
+import { privacyDoc } from '../i18n/legal/privacy';
 ---
 
-<Layout
-  title="Privacy Policy — Odys Travel"
-  description="Privacy Policy for Odys Travel: on-device photo metadata, optional private iCloud sync, no tracking."
->
+<Layout titleKey="meta.privacy.title" descriptionKey="meta.privacy.desc">
   <Header />
   <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
     <div class="odys-card p-8 sm:p-12">
-      <a href="/odys/" class="inline-flex items-center gap-2 text-xs font-bold text-[#FF7A59] mb-6 hover:underline">
+      <a href="/odys/" class="inline-flex items-center gap-2 text-xs font-bold text-[#FF7A59] mb-6 hover:underline" data-i18n="legal.back">
         ← Back to Odys Travel
       </a>
       <LegalTabs active="privacy" />
-
-      <div class="flex items-center gap-2 text-xs font-bold text-[#4ADE80] uppercase tracking-wider mb-2">
-        <span>Effective November 18, 2026</span>
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold mb-4">Privacy Policy for Odys Travel</h1>
-      <p class="text-sm text-[#6A647E] dark:text-[#928C9D] mb-8 pb-6 border-b border-black/5 dark:border-white/5 space-y-1">
-        <span class="block"><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Effective Date:</strong> November 18, 2026</span>
-        <span class="block"><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Developer:</strong> Dmitry Sinkevich</span>
-        <span class="block"><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Contact:</strong> <a href="mailto:dmitry8.work@gmail.com" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a></span>
-      </p>
-
-      <div class="legal-prose space-y-8 text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed">
-        <p>
-          This Privacy Policy describes how Odys Travel (“the App”) handles information. The publisher is Dmitry Sinkevich (“we”). Contact: <a href="mailto:dmitry8.work@gmail.com" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a>.
-        </p>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">1. What we do and do not receive</h2>
-          <p class="mb-3">
-            The App builds a travel map on your iPhone from photo dates and locations. We do not operate an account system or a server that receives your photos, photo metadata, trips, or notes.
-          </p>
-          <p class="mb-3">
-            Processing that stays on your device is performed by the App on that device. We cannot see it, and we are not the controller of that information. You delete it in the App or by deleting the App.
-          </p>
-          <p>
-            If you turn on iCloud sync, or if you use iCloud Backup, Apple processes the relevant data in your own Apple account. Apple is an independent controller for iCloud, CloudKit, Photos, Face ID, and diagnostic sharing. See <a href="https://www.apple.com/legal/privacy/" class="text-[#FF7A59] underline" rel="noopener">Apple’s Privacy Policy</a>.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">2. No advertising and no tracking</h2>
-          <p>
-            The App has no advertising, no third-party analytics SDK, and no cross-app tracking. We do not sell, rent, or share personal information for advertising or profiling.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">3. Information kept on your device</h2>
-          <p class="mb-3">If you allow photo access, the App reads, on the device:</p>
-          <ul class="list-disc pl-5 space-y-2 mb-3">
-            <li>Capture date and time of photos and videos.</li>
-            <li>GPS coordinates stored in those photos and videos.</li>
-            <li>Derived places: countries, regions, cities, stays, and routes.</li>
-            <li>Trips, notes, a wishlist, and settings you create.</li>
-            <li>A local photo index (asset identifier, date, coordinates, and place). When iCloud Photos can provide one, the index may also store Apple’s cloud photo identifier so the index can be repaired on this device. That index is not synced by us and is excluded from backups.</li>
-          </ul>
-          <p>
-            The App displays photos through the Photos library. It does not copy photo or video pixels to our servers. It does not request your live location. There is no location permission.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">4. Permissions</h2>
-          <ul class="list-disc pl-5 space-y-2 mb-3">
-            <li><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Photos.</strong> Used to read dates and locations, and to show or attach photos you pick. You can choose full access, limited access, or none in <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Settings &gt; Privacy &amp; Security &gt; Photos &gt; Odys Travel</strong>. Limited access can make the map incomplete.</li>
-            <li><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Face ID.</strong> Used only if you turn on app lock. iOS performs the check. The App does not receive your face, fingerprint, or passcode.</li>
-          </ul>
-          <p>
-            The App does not ask for permission to show notifications and does not send marketing messages. It does not use Health, contacts, microphone, or camera as inputs.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">5. Optional iCloud sync</h2>
-          <p class="mb-3">
-            Sync is off until you turn on <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Sync with iCloud</strong> in the App and restart it. You need to be signed in to iCloud.
-          </p>
-          <p class="mb-3">
-            When sync is on, places, trips, notes, and your wishlist are stored in your private CloudKit database (<span class="text-[#221F2C] dark:text-[#F5F3FA]">iCloud.com.disin8.odys-travel</span>) so your devices can share them. Photos and the photo index stay on the device. Apple may deliver silent sync updates to those devices. We do not get a copy of your iCloud database.
-          </p>
-          <p>
-            If iCloud Backup is on for the iPhone, iOS may include the App’s local database in that backup. The photo index is marked excluded from backup. Backups are in your Apple account, not ours.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">6. What leaves the device only when you send it</h2>
-          <ul class="list-disc pl-5 space-y-2">
-            <li><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Export and share.</strong> Backup (JSON), CSV, KML, GPX, and story cards are created when you ask and go only where you send them. Backups do not include photo files or photo identifiers.</li>
-            <li><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Widget.</strong> A summary (counts, flags, last trip title and dates, distance, days) is stored in an App Group on the device for the widget. It is not uploaded by us.</li>
-            <li><strong class="text-[#221F2C] dark:text-[#F5F3FA]">Spotlight.</strong> Visited country and city names can be indexed on the device so iOS search can open them. We do not receive those searches.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">7. Crash diagnostics</h2>
-          <p>
-            The App does not include its own crash reporter. If you enable Share With App Developers in iOS (<strong class="text-[#221F2C] dark:text-[#F5F3FA]">Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements</strong>), Apple may send us crash diagnostics such as device model, OS version, and a stack trace. We use those only to fix defects. You can turn that sharing off in iOS Settings.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">8. Retention and deletion</h2>
-          <p class="mb-3">
-            On-device data stays until you delete records in the App, use <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Delete all data</strong>, or delete the App. Delete all data erases visited places and the photo index on that iPhone. It does not delete photos from the Photos library.
-          </p>
-          <p>
-            We have no copy to restore. iCloud data, after you have turned sync on, is removed through your Apple account and by turning sync off. Exported files stay wherever you saved them.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">9. Children</h2>
-          <p>
-            The App is not directed to children. It should not be used by anyone under the age required in their country. We do not knowingly collect personal information from children. If you believe a child has sent us information, email us and we will delete what we actually hold.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">10. Your rights</h2>
-          <p class="mb-3">
-            Because the travel journal stays on your device and, if you opt in, in your private iCloud, you access, correct, export, and delete it there. Under the GDPR and similar laws you may also have the right to object, restrict, or lodge a complaint.
-          </p>
-          <p class="mb-3">
-            Requests about information we actually hold (for example a support email or a crash diagnostic received from Apple) can be sent to <a href="mailto:dmitry8.work@gmail.com" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a>. If we process crash diagnostics, we do so for the legitimate interest of keeping the App stable. You can stop that sharing in iOS Settings.
-          </p>
-          <p>
-            You may complain to your local data protection authority.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">11. California and other US states</h2>
-          <p>
-            We do not sell or share personal information as those terms are used in the CCPA/CPRA, and we do not use personal information for cross-context behavioral advertising. We do not hold a server copy of your journal.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">12. Changes</h2>
-          <p>
-            If this policy changes, the effective date above will change. Material changes will be posted on this page. The previous practice remains described by the version that was in effect when it happened.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-lg font-bold text-[#221F2C] dark:text-[#F5F3FA] mb-3">13. Contact</h2>
-          <p class="mb-3">
-            <strong class="text-[#221F2C] dark:text-[#F5F3FA]">Dmitry Sinkevich</strong><br />
-            Email: <a href="mailto:dmitry8.work@gmail.com" class="text-[#FF7A59] underline">dmitry8.work@gmail.com</a>
-          </p>
-          <p>
-            See also the <a href="/odys/terms/" class="text-[#FF7A59] underline">Terms of Use</a> and <a href="/odys/support/" class="text-[#FF7A59] underline">Support</a>.
-          </p>
-        </section>
-      </div>
+      <LegalArticle doc={privacyDoc} kickerClass="text-[#4ADE80]" />
     </div>
   </main>
   <Footer />

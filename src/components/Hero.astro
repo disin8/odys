@@ -6,21 +6,19 @@ import Icon from './Icon.astro';
   <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 dark:bg-white/10 border border-black/5 dark:border-white/10 text-xs font-bold text-[#FF7A59] mb-6 backdrop-blur-md shadow-sm">
       <Icon name="shield-check" class="w-4 h-4 text-[#FF7A59]" />
-      <span data-lang-en="Your Travels, Your Business" data-lang-ru="Ваши путешествия — только ваше дело">Your Travels, Your Business</span>
+      <span data-i18n="hero.badge">Your Travels, Your Business</span>
     </div>
 
     <h1
       class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-[#221F2C] dark:text-[#F5F3FA] mb-6"
-      data-lang-en="Turn your photo library into an interactive scratch map"
-      data-lang-ru="Превратите галерею фото в интерактивную карту открытий"
+      data-i18n="hero.title"
     >
       Turn your photo library into an interactive scratch map
     </h1>
 
     <p
       class="text-base sm:text-xl text-[#6A647E] dark:text-[#928C9D] leading-relaxed mb-8 max-w-2xl mx-auto"
-      data-lang-en="Relive every journey, country, and city in a vivid personal atlas. 100% on-device, zero tracking, zero cloud uploads."
-      data-lang-ru="Вспомните каждое путешествие, страну и город в личном атласе. 100% на устройстве, без слежки и без серверов."
+      data-i18n="hero.lead"
     >
       Relive every journey, country, and city in a vivid personal atlas. 100% on-device, zero tracking, zero cloud uploads.
     </p>
@@ -39,7 +37,7 @@ import Icon from './Icon.astro';
           </g>
         </svg>
         <div class="text-left leading-tight">
-          <div class="text-[10px] font-normal tracking-wide opacity-80">Download on the</div>
+          <div class="text-[10px] font-normal tracking-wide opacity-80" data-i18n="hero.downloadOn">Download on the</div>
           <div class="text-base font-bold">App Store</div>
         </div>
       </a>
@@ -47,8 +45,7 @@ import Icon from './Icon.astro';
 
     <div
       class="text-xs text-[#6A647E] dark:text-[#928C9D]"
-      data-lang-en="Free download · Built for iOS 18 and later · Works completely offline"
-      data-lang-ru="Бесплатно · Для iOS 18 или новее · Работает полностью офлайн"
+      data-i18n="hero.note"
     >
       Free download · Built for iOS 18 and later · Works completely offline
     </div>
@@ -61,8 +58,8 @@ import Icon from './Icon.astro';
         id="tab-0"
         class="screen-tab active inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-[#FF7A59] text-white shadow-lg"
       >
-        <span data-lang-en="Scratch Map" data-lang-ru="Карта открытий">Scratch Map</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/20 text-white">10 Visited</span>
+        <span data-i18n="hero.tab0">Scratch Map</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/20 text-white" data-i18n="hero.badge0">10 Visited</span>
       </button>
       <button
         type="button"
@@ -70,8 +67,8 @@ import Icon from './Icon.astro';
         id="tab-1"
         class="screen-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-white/70 dark:bg-white/10 text-[#6A647E] dark:text-[#928C9D] hover:bg-white dark:hover:bg-white/15"
       >
-        <span data-lang-en="Journeys & Flights" data-lang-ru="Поездки и маршруты">Journeys & Flights</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-[#8E88A4]">2025</span>
+        <span data-i18n="hero.tab1">Journeys & Flights</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-[#8E88A4]" data-i18n="hero.badge1">2025</span>
       </button>
       <button
         type="button"
@@ -79,8 +76,8 @@ import Icon from './Icon.astro';
         id="tab-2"
         class="screen-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer bg-white/70 dark:bg-white/10 text-[#6A647E] dark:text-[#928C9D] hover:bg-white dark:hover:bg-white/15"
       >
-        <span data-lang-en="Lifetime Stats" data-lang-ru="Статистика">Lifetime Stats</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-[#8E88A4]">4% World</span>
+        <span data-i18n="hero.tab2">Lifetime Stats</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-[#8E88A4]" data-i18n="hero.badge2">4% World</span>
       </button>
     </div>
 
@@ -93,7 +90,7 @@ import Icon from './Icon.astro';
           >
             <img
               id="hero-screen-img"
-              src="/odys/assets/aistudio/IMG_2916_99e55772.webp"
+              src="/odys/assets/aistudio/IMG_2920_51c54557.webp"
               alt="Odys Travel App Screen"
               class="w-full h-full object-cover select-none transition-opacity duration-300"
             />
@@ -110,17 +107,17 @@ import Icon from './Icon.astro';
       <div class="lg:col-span-5 space-y-4">
         <div class="odys-card p-6 border transition-all">
           <div class="flex items-center gap-3 mb-2">
-            <span class="text-xs font-bold uppercase tracking-wider text-[#FF7A59]">Odys iOS Feature</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-[#FF7A59]" data-i18n="hero.kicker">Odys iOS Feature</span>
           </div>
-          <h3 id="screen-title" class="text-xl font-bold mb-2">Interactive Scratch Map</h3>
-          <p id="screen-desc" class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed">
+          <h3 id="screen-title" class="text-xl font-bold mb-2" data-i18n="hero.s0.title">Interactive Scratch Map</h3>
+          <p id="screen-desc" class="text-sm text-[#6A647E] dark:text-[#928C9D] leading-relaxed" data-i18n="hero.s0.desc">
             Every country and region you visit is automatically colored on your private map directly from your photo timestamps.
           </p>
         </div>
 
         <div class="odys-card p-5 border flex items-center justify-between text-xs font-medium text-[#6A647E] dark:text-[#928C9D]">
-          <span>Theme adapted automatically</span>
-          <span class="px-2.5 py-1 rounded-full bg-[#FF7A59]/10 text-[#FF7A59] font-bold">100% On-Device</span>
+          <span data-i18n="hero.theme">Theme adapted automatically</span>
+          <span class="px-2.5 py-1 rounded-full bg-[#FF7A59]/10 text-[#FF7A59] font-bold" data-i18n="hero.ondevice">100% On-Device</span>
         </div>
       </div>
     </div>
@@ -132,26 +129,20 @@ import Icon from './Icon.astro';
     {
       dark: '/odys/assets/aistudio/IMG_2916_99e55772.webp',
       light: '/odys/assets/aistudio/IMG_2920_51c54557.webp',
-      titleEn: 'Interactive Scratch Map',
-      titleRu: 'Интерактивная карта открытий',
-      descEn: 'Every country and region you visit is automatically colored on your private map directly from your photo timestamps.',
-      descRu: 'Каждая страна и регион автоматически закрашиваются на вашей карте на основе метаданных ваших фотографий.'
+      titleKey: 'hero.s0.title',
+      descKey: 'hero.s0.desc'
     },
     {
       dark: '/odys/assets/aistudio/IMG_2918_2bcd836f.webp',
       light: '/odys/assets/aistudio/IMG_2922_69e21ad8.webp',
-      titleEn: 'Animated Journeys & Flight Paths',
-      titleRu: 'Анимированные маршруты и перелёты',
-      descEn: 'Replay your travel routes as smooth animated flight paths, calculate total distance, and organize trips by year.',
-      descRu: 'Пересматривайте перелёты плавной анимацией дуг над планетой, считайте пройденный километраж и годы.'
+      titleKey: 'hero.s1.title',
+      descKey: 'hero.s1.desc'
     },
     {
       dark: '/odys/assets/aistudio/IMG_2919_0f756b60.webp',
       light: '/odys/assets/aistudio/IMG_2921_c7dcf275.webp',
-      titleEn: 'Personal Travel Lifetime Stats',
-      titleRu: 'Пожизненная статистика поездок',
-      descEn: 'Explore your top visited destinations, days abroad, passport stamp milestones, and percentage of the globe explored.',
-      descRu: 'Смотрите любимые направления, количество дней за границей, проценты исследованного мира и штампы.'
+      titleKey: 'hero.s2.title',
+      descKey: 'hero.s2.desc'
     }
   ];
 
@@ -163,17 +154,12 @@ import Icon from './Icon.astro';
     const imgEl = document.getElementById('hero-screen-img');
     const titleEl = document.getElementById('screen-title');
     const descEl = document.getElementById('screen-desc');
-    const isRu = (localStorage.getItem('lang') || 'en') === 'ru';
-
     if (imgEl) {
       imgEl.src = isDark ? screen.dark : screen.light;
     }
-    if (titleEl) {
-      titleEl.textContent = isRu ? screen.titleRu : screen.titleEn;
-    }
-    if (descEl) {
-      descEl.textContent = isRu ? screen.descRu : screen.descEn;
-    }
+    if (titleEl) titleEl.setAttribute('data-i18n', screen.titleKey);
+    if (descEl) descEl.setAttribute('data-i18n', screen.descKey);
+    window.odysApply?.();
   }
 
   function switchScreen(idx) {
@@ -191,4 +177,5 @@ import Icon from './Icon.astro';
 
   const observer = new MutationObserver(() => updateHeroImage());
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  updateHeroImage();
 </script>

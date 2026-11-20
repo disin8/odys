@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "plus jakarta sans",
+        "createdAt": "2026-11-20T06:33:41.777Z",
+        "reason": "Existing Odys landing typeface already used in global.css; this i18n change did not select it."
+      }
+    ]
+  }
+}
